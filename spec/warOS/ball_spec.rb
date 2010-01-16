@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../lib/ship.rb')
+require File.dirname(__FILE__) + "/../spec_helper"
 
-describe Ship do
-  it 'should be the truth' do
-    Ship.truth.should be_true
+describe Ball do
+  it 'should instantiate a ball object with a image loaded' do
+    Ball.truth.should be_true
   end
 end
