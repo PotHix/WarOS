@@ -22,6 +22,3 @@ class WarOS < Gosu::Window
     end
   end
 end
-
-window = WarOS.new
-window.show
