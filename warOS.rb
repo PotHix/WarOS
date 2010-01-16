@@ -23,5 +23,5 @@ class WarOS < Gosu::Window
   end
 end
 
-window = ArkanoidOS.new
+window = WarOS.new
 window.show
