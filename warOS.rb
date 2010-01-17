@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'warOS'
+require 'lib/warOS'
 
 window = WarOS.new
 window.show
