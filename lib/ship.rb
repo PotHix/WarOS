@@ -1,6 +1,7 @@
 class Ship
-  SHIPVELOCITY = 5.0
-  SHIPWIDTH    = 170
+  SHIPSECUREMARGIN = 10
+  SHIPVELOCITY     = 5.0
+  SHIPWIDTH        = 170
 
   def initialize(window)
     @ship = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ship.png"), true)
@@ -9,7 +10,7 @@ class Ship
   end
 
   def move_left
-    @x -= SHIPVELOCITY if @x > WarOS::WINDOWMARGIN
+    @x -= SHIPVELOCITY if @x > SHIPSECUREMARGIN
   end
 
   def move_right

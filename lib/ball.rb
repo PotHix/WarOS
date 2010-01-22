@@ -13,17 +13,8 @@ class Ball
   end
 
   def move
-    if @moving_state[:top]
-      @y -= @ball_velocity
-    else
-      @y += @ball_velocity
-    end
-
-    if @moving_state[:right]
-      @x += @ball_velocity
-    else
-      @x -= @ball_velocity
-    end
+    @moving_state[:top]   ? @y -= @ball_velocity : @y += @ball_velocity
+    @moving_state[:right] ? @x += @ball_velocity : @x -= @ball_velocity
   end
 
   def draw

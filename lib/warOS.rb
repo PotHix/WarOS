@@ -5,7 +5,6 @@ require 'lib/ball'
 require 'lib/ship'
 
 class WarOS < Gosu::Window
-  WINDOWMARGIN  = 10
   WIDTH, HEIGHT = 480, 640
 
   def initialize

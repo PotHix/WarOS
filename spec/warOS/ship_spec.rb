@@ -13,10 +13,7 @@ describe Ship do
   context 'when moving to the right' do
     it 'should subtract the shipvelocity to the x position of the ship' do
       before_move_x = @ship.instance_variable_get("@x") 
-      @ship.move_right
-      after_move_x  = @ship.instance_variable_get("@x") 
-
-      after_move_x.should eql(before_move_x + Ship::SHIPVELOCITY)
+      @ship.move_right.should eql(before_move_x + Ship::SHIPVELOCITY)
     end
 
     it 'should not add value to x coordinate if is the end of the window size' do
@@ -29,16 +26,13 @@ describe Ship do
   context 'when moving to the left' do
     it 'should add the shipvelocity to the x position of the ship' do
       before_move_x = @ship.instance_variable_get("@x") 
-      @ship.move_left
-      after_move_x  = @ship.instance_variable_get("@x") 
-
-      after_move_x.should eql(before_move_x - Ship::SHIPVELOCITY)
+      @ship.move_left.should eql(before_move_x - Ship::SHIPVELOCITY)
     end
 
     it 'should not subtract value of x coordinate if is the beggining of the window size' do
-      @ship.instance_variable_set("@x", WarOS::WINDOWMARGIN) 
+      @ship.instance_variable_set("@x", Ship::SHIPSECUREMARGIN) 
       @ship.move_left
-      @ship.instance_variable_get("@x").should eql(WarOS::WINDOWMARGIN)
+      @ship.instance_variable_get("@x").should eql(Ship::SHIPSECUREMARGIN)
     end
   end
 
