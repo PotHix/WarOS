@@ -13,6 +13,7 @@ class WarOS < Gosu::Window
     self.caption = "WarOS Game!"
 
     @ship = Ship.new(self)
+    @ball = Ball.new(self)
   end
 
   def update
@@ -23,10 +24,13 @@ class WarOS < Gosu::Window
     if button_down? Gosu::KbRight or button_down? Gosu::GpRight
       @ship.move_right
     end
+
+    @ball.move
   end
 
   def draw
     @ship.draw
+    @ball.draw
   end
 
   def button_down(id)
