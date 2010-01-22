@@ -1,6 +1,7 @@
 # encoding: utf-8
-require "rubygems"
-require "spec"
+require 'rubygems'
+require 'spec'
+
 
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + "/../lib")
 
