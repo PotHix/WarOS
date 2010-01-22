@@ -16,4 +16,4 @@ With the Gosu gem installed just run the warOS.rb file of the root directory:
 
 ## Developer ##
 
-This game was created by Willian Molinari and is maintained by PotHix (ok...They are the same person! :P)
+This game was created by **Willian Molinari** and is maintained by **PotHix** (ok...They are the same person! :P)
