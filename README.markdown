@@ -8,11 +8,11 @@
 
 Firstly, You need to install gosu gem:
 
-   sudo gem install gosu
+      sudo gem install gosu
 
 With the Gosu gem installed just run the warOS.rb file of the root directory:
 
-   ./warOS.rb
+      ./warOS.rb
 
 ## Developer ##
 
