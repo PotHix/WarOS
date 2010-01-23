@@ -24,9 +24,12 @@ class Ball
   end
 
   def colision_detect
-    @moving_state[:top]   = true  if @y == WarOS::HEIGHT-BALLWIDTH
     @moving_state[:top]   = false if @y.zero?
-    @moving_state[:right] = false if @x == WarOS::WIDTH-BALLWIDTH
+    @moving_state[:right] = false if @x == WarOS::WIDTH - BALLWIDTH
     @moving_state[:right] = true  if @x.zero?
+
+    if @y == WarOS::HEIGHT - BALLWIDTH - Ship::SHIPHEIGHT
+      @moving_state[:top] = true  
+    end
   end
 end
