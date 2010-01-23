@@ -13,6 +13,9 @@ class WarOS < Gosu::Window
 
     @ship = Ship.new(self)
     @ball = Ball.new(self)
+
+    @text = Gosu::Font.new(self,'Arial',15)
+    @moving_state_text = Gosu::Font.new(self,'Arial',15)
   end
 
   def update
@@ -30,6 +33,9 @@ class WarOS < Gosu::Window
   def draw
     @ship.draw
     @ball.draw
+
+    @text.draw("x = #{@ball.instance_variable_get('@x')} | y = #{@ball.instance_variable_get('@y')}",10,10,0)
+    @text.draw("top = #{@ball.instance_variable_get('@moving_state')[:top]} | right = #{@ball.instance_variable_get('@moving_state')[:right]}",10,20,0)
   end
 
   def button_down(id)
