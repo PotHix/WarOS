@@ -1,4 +1,5 @@
 class Ball
+  BALLWIDTH = 30
 
   def initialize(window)
     @ball = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
@@ -13,11 +14,30 @@ class Ball
   end
 
   def move
+    colision_detect
     @moving_state[:top]   ? @y -= @ball_velocity : @y += @ball_velocity
     @moving_state[:right] ? @x += @ball_velocity : @x -= @ball_velocity
   end
 
   def draw
     @ball.draw(@x, @y, 0)
+  end
+
+  def colision_detect
+    if @y == WarOS::HEIGHT-BALLWIDTH
+      @moving_state[:top] = true
+    end
+
+    if @y == 0
+      @moving_state[:top] = false
+    end
+
+    if @x == WarOS::WIDTH-BALLWIDTH
+      @moving_state[:right] = false
+    end
+
+    if @x == 0
+      @moving_state[:right] = true
+    end
   end
 end
