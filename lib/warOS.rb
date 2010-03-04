@@ -43,4 +43,8 @@ class WarOS < Gosu::Window
       close
     end
   end
+
+  def game_over?
+    @ball.position[:y] >= (HEIGHT - Ball::BALLWIDTH)
+  end
 end
