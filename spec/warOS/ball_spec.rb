@@ -38,25 +38,25 @@ describe Ball do
     context 'and coliding' do
       it 'in top it should change moving_state[top] to false' do
         @ball.instance_variable_set("@y", 0) 
-        @ball.borders_colision_detect
+        @ball.directions_changing
         @ball.instance_variable_get("@moving_state")[:top].should be_false
       end
 
       it 'in bottom it should change moving_state[top] to true' do
         @ball.instance_variable_set("@y", WarOS::HEIGHT) 
-        @ball.borders_colision_detect
+        @ball.directions_changing
         @ball.instance_variable_get("@moving_state")[:top].should be_true
       end
 
       it 'in right it should change moving_state[right] to false' do
         @ball.instance_variable_set("@x", WarOS::WIDTH-Ball::BALLWIDTH) 
-        @ball.borders_colision_detect
+        @ball.directions_changing
         @ball.instance_variable_get("@moving_state")[:right].should be_false
       end
 
       it 'in left it should change moving_state[right] to true' do
         @ball.instance_variable_set("@x", 0) 
-        @ball.borders_colision_detect
+        @ball.directions_changing
         @ball.instance_variable_get("@moving_state")[:right].should be_true
       end
     end

@@ -6,6 +6,7 @@ require 'lib/ship'
 
 class WarOS < Gosu::Window
   WIDTH, HEIGHT = 480, 640
+  SHIPCOLISIONPOSITION = HEIGHT - Ball::BALLWIDTH - Ship::SHIPHEIGHT
 
   def initialize
     super(WIDTH, HEIGHT, false)
@@ -19,6 +20,8 @@ class WarOS < Gosu::Window
   end
 
   def update
+    close if game_over?
+
     if button_down? Gosu::KbLeft or button_down? Gosu::GpLeft
       @ship.move_left
     end
@@ -27,6 +30,7 @@ class WarOS < Gosu::Window
       @ship.move_right
     end
 
+    @ball.directions_changing :to_top => has_ship_and_ball_colision?
     @ball.move
   end
 
@@ -39,12 +43,14 @@ class WarOS < Gosu::Window
   end
 
   def button_down(id)
-    if id == Gosu::KbEscape
-      close
-    end
+    close if id == Gosu::KbEscape
   end
 
   def game_over?
     @ball.position[:y] >= (HEIGHT - Ball::BALLWIDTH)
+  end
+
+  def has_ship_and_ball_colision?
+    @ball.position[:y] == SHIPCOLISIONPOSITION && @ship.position.include?(@ball.position[:x])
   end
 end

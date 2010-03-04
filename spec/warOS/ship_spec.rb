@@ -43,6 +43,7 @@ describe Ship do
   end
 
   it 'should return the actual x position of the ship' do
-    @ship.position.should eql(@ship.instance_variable_get("@x"))
+    x_position = @ship.instance_variable_get("@x")
+    @ship.position.should eql(x_position..x_position+Ship::SHIPWIDTH) 
   end
 end

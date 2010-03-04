@@ -23,6 +23,6 @@ class Ship
   end
   
   def position
-    @x
+    @x..(@x+SHIPWIDTH)
   end
 end
