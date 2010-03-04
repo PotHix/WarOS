@@ -14,7 +14,7 @@ class Ball
   end
 
   def move
-    colision_detect
+    borders_colision_detect
     @moving_state[:top]   ? @y -= @ball_velocity : @y += @ball_velocity
     @moving_state[:right] ? @x += @ball_velocity : @x -= @ball_velocity
   end
@@ -23,13 +23,14 @@ class Ball
     @ball.draw(@x, @y, 0)
   end
 
-  def colision_detect
+  def borders_colision_detect
     @moving_state[:top]   = false if @y.zero?
     @moving_state[:right] = false if @x == WarOS::WIDTH - BALLWIDTH
     @moving_state[:right] = true  if @x.zero?
-
-    if @y == WarOS::HEIGHT - BALLWIDTH - Ship::SHIPHEIGHT
-      @moving_state[:top] = true  
-    end
+    @moving_state[:top] = true if @y == (WarOS::HEIGHT - BALLWIDTH - Ship::SHIPHEIGHT)
+  end
+  
+  def position
+    {:x => @x, :y => @y}
   end
 end

@@ -10,7 +10,7 @@ class Ship
     @x = WarOS::WIDTH/3
   end
 
-  def move_left
+  def move_left 
     @x -= SHIPVELOCITY if @x > SHIPSECUREMARGIN
   end
 
@@ -20,5 +20,9 @@ class Ship
 
   def draw
     @ship.draw(@x, @y, 0)
+  end
+  
+  def position
+    @x
   end
 end

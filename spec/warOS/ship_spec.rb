@@ -41,4 +41,8 @@ describe Ship do
     @ship.should_receive(:draw).with(0,0,0)
     @ship.draw 
   end
+
+  it 'should return the actual x position of the ship' do
+    @ship.position.should eql(@ship.instance_variable_get("@x"))
+  end
 end

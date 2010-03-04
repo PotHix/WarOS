@@ -38,28 +38,35 @@ describe Ball do
     context 'and coliding' do
       it 'in top it should change moving_state[top] to false' do
         @ball.instance_variable_set("@y", 0) 
-        @ball.colision_detect
+        @ball.borders_colision_detect
         @ball.instance_variable_get("@moving_state")[:top].should be_false
       end
 
       it 'in bottom it should change moving_state[top] to true' do
         @ball.instance_variable_set("@y", WarOS::HEIGHT) 
-        @ball.colision_detect
+        @ball.borders_colision_detect
         @ball.instance_variable_get("@moving_state")[:top].should be_true
       end
 
       it 'in right it should change moving_state[right] to false' do
         @ball.instance_variable_set("@x", WarOS::WIDTH-Ball::BALLWIDTH) 
-        @ball.colision_detect
+        @ball.borders_colision_detect
         @ball.instance_variable_get("@moving_state")[:right].should be_false
       end
 
       it 'in left it should change moving_state[right] to true' do
         @ball.instance_variable_set("@x", 0) 
-        @ball.colision_detect
+        @ball.borders_colision_detect
         @ball.instance_variable_get("@moving_state")[:right].should be_true
       end
     end
+  end
+
+  it 'should return the current ball position' do
+    position = { :x => @ball.instance_variable_get("@x"),
+      :y => @ball.instance_variable_get("@y") }
+
+    @ball.position.should eql(position)
   end
 
   private
