@@ -8,6 +8,8 @@ class WarOS < Gosu::Window
   WIDTH, HEIGHT = 480, 640
   SHIPCOLISIONPOSITION = HEIGHT - Ball::BALLWIDTH - Ship::SHIPHEIGHT
 
+  attr_reader :ship, :ball
+
   def initialize
     super(WIDTH, HEIGHT, false)
     self.caption = "WarOS Game!"

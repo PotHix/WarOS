@@ -4,6 +4,8 @@ class Ship
   SHIPSECUREMARGIN = 10
   SHIPVELOCITY     = 5.0
 
+  attr_accessor :x, :y
+
   def initialize(window)
     @ship = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ship.png"), true)
     @y = WarOS::HEIGHT-30

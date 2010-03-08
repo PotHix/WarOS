@@ -1,6 +1,8 @@
 class Ball
   BALLWIDTH = 30
 
+  attr_accessor :x, :y, :moving_state, :ball_velocity
+
   def initialize(window)
     @ball = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
 
