@@ -5,8 +5,8 @@ require 'lib/ball'
 require 'lib/ship'
 
 class WarOS < Gosu::Window
-  WIDTH, HEIGHT = 480, 640
-  SHIPCOLISIONPOSITION = HEIGHT - Ball::BALLWIDTH - Ship::SHIPHEIGHT
+  WIDTH, HEIGHT = 640, 640
+  SHIPCOLISIONPOSITION = Ship::INITIALPOSITION[:y] - Ball::BALLWIDTH
 
   attr_reader :ship, :ball
 
@@ -57,6 +57,6 @@ class WarOS < Gosu::Window
   end
 
   def has_ship_and_ball_colision?
-    @ball.position[:y] == SHIPCOLISIONPOSITION && @ship.position.include?(@ball.position[:x])
+     (SHIPCOLISIONPOSITION-Ball::DIRECTIONCHANGEMARGIN..SHIPCOLISIONPOSITION+Ball::DIRECTIONCHANGEMARGIN).include?(@ball.position[:y]) && @ship.position.include?(@ball.position[:x])
   end
 end

@@ -1,12 +1,13 @@
 class Ball
   BALLWIDTH = 30
+  DIRECTIONCHANGEMARGIN = 1
 
   attr_accessor :x, :y, :moving_state, :ball_velocity
 
   def initialize(window)
     @ball = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
 
-    @ball_velocity = 2.5
+    @ball_velocity = 3.0
     @y = WarOS::HEIGHT/2
     @x = WarOS::WIDTH/3
  
@@ -25,10 +26,10 @@ class Ball
   end
 
   def directions_changing(allow = {})
-    @moving_state[:top]   = false if @y.zero?
+    @moving_state[:top] = false if ((0-DIRECTIONCHANGEMARGIN)..(0+DIRECTIONCHANGEMARGIN)).include?(@y)
     @moving_state[:top] = true if allow[:to_top]
-    @moving_state[:right] = false if @x == WarOS::WIDTH - BALLWIDTH
-    @moving_state[:right] = true  if @x.zero?
+    @moving_state[:right] = false if ((WarOS::WIDTH - BALLWIDTH - DIRECTIONCHANGEMARGIN)..(WarOS::WIDTH - BALLWIDTH + DIRECTIONCHANGEMARGIN)).include?(@x)
+    @moving_state[:right] = true  if ((0-DIRECTIONCHANGEMARGIN)..(0+DIRECTIONCHANGEMARGIN)).include?(@x)
   end
   
   def position

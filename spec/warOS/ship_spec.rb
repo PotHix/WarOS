@@ -2,8 +2,8 @@ require File.dirname(__FILE__) + "/../spec_helper"
 
 describe Ship do
   before(:each) do
-    @window ||= WarOS.new
-    @ship   ||= Ship.new @window
+    @window = WarOS.new
+    @ship   = Ship.new @window
   end
 
   it 'should instantiate a ship object with a image loaded' do
