@@ -57,6 +57,7 @@ class WarOS < Gosu::Window
   end
 
   def has_ship_and_ball_colision?
-     (SHIPCOLISIONPOSITION-Ball::DIRECTIONCHANGEMARGIN..SHIPCOLISIONPOSITION+Ball::DIRECTIONCHANGEMARGIN).include?(@ball.position[:y]) && @ship.position.include?(@ball.position[:x])
+    secure_margin_range = SHIPCOLISIONPOSITION-Ball::DIRECTIONCHANGEMARGIN..SHIPCOLISIONPOSITION+Ball::DIRECTIONCHANGEMARGIN
+    secure_margin_range.include?(@ball.position[:y]) && @ship.position.include?(@ball.position[:x])
   end
 end
