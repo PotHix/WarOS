@@ -10,9 +10,9 @@ Firstly, You need to install gosu gem:
 
       sudo gem install gosu
 
-With the Gosu gem installed just run the warOS.rb file of the root directory:
+With the Gosu gem installed just run the init.rb file of the root directory:
 
-      ./warOS.rb
+      ./init.rb
 
 ## Developers ##
 
