@@ -14,6 +14,7 @@ With the Gosu gem installed just run the warOS.rb file of the root directory:
 
       ./warOS.rb
 
-## Developer ##
+## Developers ##
 
-This game was created by **Willian Molinari** and is maintained by **PotHix** (ok...They are the same person! :P)
+- This game was created by **[Willian Molinari](http://pothix.com/blog)** and is maintained by **[PotHix](http://pothix.com/blog)** (ok...They are the same person! :P)
+- All graphics made by **[Rafael Masoni](http://rafaelmasoni.com/)**
