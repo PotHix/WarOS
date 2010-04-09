@@ -1,5 +1,5 @@
 class Ball
-  BALLWIDTH = 30
+  BALLWIDTH = 20
   DIRECTIONCHANGEMARGIN = 1
 
   attr_accessor :x, :y, :moving_state, :ball_velocity
