@@ -2,7 +2,7 @@ class Ship
   SHIPWIDTH, SHIPHEIGHT = 170, 30
   INITIALPOSITION = {:y => 510, :x => 210}
 
-  SHIPSECUREMARGIN = 10
+  SHIPSECUREMARGIN = 5
   SHIPVELOCITY     = 5.0
 
   attr_accessor :x, :y
