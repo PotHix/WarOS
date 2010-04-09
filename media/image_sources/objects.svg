@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.47pre4 r22446"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="objects.svg">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -32,16 +32,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="223.48772"
-     inkscape:cy="790.59641"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-44.487072"
+     inkscape:cy="589.86369"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="751"
+     inkscape:window-height="1000"
      inkscape:window-x="0"
-     inkscape:window-y="1024"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -59,33 +59,54 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g2822"
-       transform="matrix(0.44444444,0,0,0.44444444,-28.078524,-153.29085)">
-      <rect
-         ry="20.714285"
-         y="443.79074"
-         x="142.85715"
-         height="54.285713"
-         width="360"
-         id="rect2816"
-         style="fill:#000000" />
-      <rect
-         style="fill:#000000"
-         id="rect2818"
-         width="360"
-         height="54.285713"
-         x="142.85715"
-         y="443.79074"
-         ry="20.714285" />
-      <rect
-         ry="16.898495"
-         y="448.79074"
-         x="148.1579"
-         height="44.285713"
-         width="349.3985"
-         id="rect2820"
-         style="fill:#1a1a1a" />
-    </g>
+    <rect
+       style="fill:#000000"
+       id="rect2816"
+       width="160"
+       height="24.126984"
+       x="35.41354"
+       y="43.949478"
+       ry="9.2063484" />
+    <rect
+       ry="9.2063484"
+       y="43.949478"
+       x="35.41354"
+       height="24.126984"
+       width="160"
+       id="rect2818"
+       style="fill:#000000" />
+    <rect
+       style="fill:#1a1a1a"
+       id="rect2820"
+       width="155.28822"
+       height="19.682539"
+       x="37.769428"
+       y="46.1717"
+       ry="7.5104423" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#666666;stroke-width:0.15528249999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2881"
+       width="480"
+       height="640"
+       x="225"
+       y="20.219324"
+       ry="7.5104423"
+       inkscape:export-filename="/files/codes/ruby/warOS/media/background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:35.54811096000000248px;font-style:normal;font-weight:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="250.73236"
+       y="386.80331"
+       id="text2883"
+       inkscape:export-filename="/files/codes/ruby/warOS/media/background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan2885"
+         x="250.73236"
+         y="386.80331"
+         style="font-size:127.97320556999999042px;fill:#1a1a1a">WarOS</tspan></text>
   </g>
 </svg>

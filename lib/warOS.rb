@@ -17,6 +17,8 @@ class WarOS < Gosu::Window
     @ship = Ship.new(self)
     @ball = Ball.new(self)
 
+    @background_image = Gosu::Image.new(self, "media/background.png", true)
+
     @text = Gosu::Font.new(self,'Arial',15)
     @moving_state_text = Gosu::Font.new(self,'Arial',15)
   end
@@ -37,6 +39,8 @@ class WarOS < Gosu::Window
   end
 
   def draw
+    @background_image.draw(0, 0, 0)
+
     @ship.draw
     @ball.draw
 
