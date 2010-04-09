@@ -33,15 +33,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="-44.487072"
-     inkscape:cy="589.86369"
+     inkscape:cx="285.4726"
+     inkscape:cy="648.08404"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="1000"
+     inkscape:window-height="751"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="1024"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,54 +59,128 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#000000"
-       id="rect2816"
-       width="160"
-       height="24.126984"
-       x="35.41354"
-       y="43.949478"
-       ry="9.2063484" />
-    <rect
-       ry="9.2063484"
-       y="43.949478"
-       x="35.41354"
-       height="24.126984"
-       width="160"
-       id="rect2818"
-       style="fill:#000000" />
-    <rect
-       style="fill:#1a1a1a"
-       id="rect2820"
-       width="155.28822"
-       height="19.682539"
-       x="37.769428"
-       y="46.1717"
-       ry="7.5104423" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:#666666;stroke-width:0.15528249999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect2881"
-       width="480"
-       height="640"
-       x="225"
-       y="20.219324"
-       ry="7.5104423"
-       inkscape:export-filename="/files/codes/ruby/warOS/media/background.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <text
-       xml:space="preserve"
-       style="font-size:35.54811096000000248px;font-style:normal;font-weight:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="250.73236"
-       y="386.80331"
-       id="text2883"
-       inkscape:export-filename="/files/codes/ruby/warOS/media/background.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2885"
-         x="250.73236"
+    <g
+       id="g2825"
+       transform="matrix(0.675,0,0,1,599.70287,630.77105)">
+      <rect
+         ry="9.2063484"
+         y="43.949478"
+         x="35.41354"
+         height="24.126984"
+         width="160"
+         id="rect2816"
+         style="fill:#000000" />
+      <rect
+         style="fill:#000000"
+         id="rect2818"
+         width="160"
+         height="24.126984"
+         x="35.41354"
+         y="43.949478"
+         ry="9.2063484" />
+      <rect
+         ry="7.5104423"
+         y="46.1717"
+         x="37.769428"
+         height="19.682539"
+         width="155.28822"
+         id="rect2820"
+         style="fill:#1a1a1a" />
+    </g>
+    <g
+       id="g2820"
+       transform="translate(24.243661,-2.0203051)">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/files/codes/ruby/warOS/media/background.png"
+         ry="7.5104423"
+         y="20.219324"
+         x="225"
+         height="640"
+         width="480"
+         id="rect2881"
+         style="fill:#000000;fill-opacity:1;stroke:#666666;stroke-width:0.1552825;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/files/codes/ruby/warOS/media/background.png"
+         id="text2883"
          y="386.80331"
-         style="font-size:127.97320556999999042px;fill:#1a1a1a">WarOS</tspan></text>
+         x="250.73236"
+         style="font-size:35.54811096px;font-style:normal;font-weight:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:127.97320557px;fill:#1a1a1a"
+           y="386.80331"
+           x="250.73236"
+           id="tspan2885"
+           sodipodi:role="line">WarOS</tspan></text>
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#1a1a1a;fill-opacity:1;stroke:#666666;stroke-width:0.29149693;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2818"
+       sodipodi:cx="109.09647"
+       sodipodi:cy="404.8544"
+       sodipodi:rx="20.203051"
+       sodipodi:ry="17.172594"
+       d="m 129.29952,404.8544 a 20.203051,17.172594 0 1 1 -40.406097,0 20.203051,17.172594 0 1 1 40.406097,0 z"
+       transform="matrix(0.49113171,0,0,0.57780197,204.52437,452.85835)" />
+    <g
+       transform="matrix(1,0,0,0.99473686,536.19347,671.12935)"
+       id="g2849">
+      <rect
+         style="fill:#000000"
+         id="rect2851"
+         width="160"
+         height="24.126984"
+         x="35.41354"
+         y="43.949478"
+         ry="9.2063484" />
+      <rect
+         ry="9.2063484"
+         y="43.949478"
+         x="35.41354"
+         height="24.126984"
+         width="160"
+         id="rect2853"
+         style="fill:#000000" />
+      <rect
+         style="fill:#1a1a1a"
+         id="rect2855"
+         width="155.28822"
+         height="19.682539"
+         x="37.769428"
+         y="46.1717"
+         ry="7.5104423" />
+    </g>
+    <g
+       id="g2857"
+       transform="matrix(1.33125,0,0,1,471.46273,710.77105)">
+      <rect
+         ry="9.2063484"
+         y="43.949478"
+         x="35.41354"
+         height="24.126984"
+         width="160"
+         id="rect2859"
+         style="fill:#000000" />
+      <rect
+         style="fill:#000000"
+         id="rect2861"
+         width="160"
+         height="24.126984"
+         x="35.41354"
+         y="43.949478"
+         ry="9.2063484" />
+      <rect
+         ry="7.5104423"
+         y="46.1717"
+         x="37.769428"
+         height="19.682539"
+         width="155.28822"
+         id="rect2863"
+         style="fill:#1a1a1a" />
+    </g>
   </g>
 </svg>
