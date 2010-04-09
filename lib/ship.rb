@@ -1,5 +1,12 @@
 class Ship
-  SHIPWIDTH, SHIPHEIGHT = 165, 24
+  SHIPWIDTH, SHIPHEIGHT = 160, 24
+
+  DIMENSIONS = {
+    :win => { :width  => 213, :height => 24 },
+    :mac => { :width  => 160, :height => 24 },
+    :lin => { :width  => 108, :height => 24 }
+  }
+
   INITIALPOSITION = {:y => 510, :x => 210}
 
   SHIPSECUREMARGIN = 5
