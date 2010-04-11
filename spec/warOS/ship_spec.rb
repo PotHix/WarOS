@@ -17,9 +17,9 @@ describe Ship do
     end
 
     it 'should not add value to x coordinate if is the end of the window size' do
-      @ship.x = WarOS::HEIGHT-Ship::SHIPWIDTH
+      @ship.x = WarOS::HEIGHT-Ship::DIMENSIONS[@ship.state][:width]
       @ship.move_right
-      @ship.x.should eql(WarOS::HEIGHT-Ship::SHIPWIDTH)
+      @ship.x.should eql(WarOS::HEIGHT-Ship::DIMENSIONS[@ship.state][:width])
     end
   end
 
@@ -38,6 +38,36 @@ describe Ship do
 
   it 'should return the actual x position of the ship' do
     x_position = @ship.x
-    @ship.position.should eql(x_position..x_position+Ship::SHIPWIDTH) 
+    @ship.position.should eql(x_position..x_position+Ship::DIMENSIONS[@ship.state][:width]) 
+  end
+
+  context 'to get the correct width' do
+    it 'for mac pad' do
+      @ship.state = :mac
+      @ship.width.should eql(Ship::DIMENSIONS[:mac][:width])
+    end
+    it 'for lin pad' do
+      @ship.state = :lin
+      @ship.width.should eql(Ship::DIMENSIONS[:lin][:width])
+    end
+    it 'for win pad' do
+      @ship.state = :win
+      @ship.width.should eql(Ship::DIMENSIONS[:win][:width])
+    end
+  end
+
+  context 'to get the correct height' do
+    it 'for mac pad' do
+      @ship.state = :mac
+      @ship.height.should eql(Ship::DIMENSIONS[:mac][:height])
+    end
+    it 'for lin pad' do
+      @ship.state = :lin
+      @ship.height.should eql(Ship::DIMENSIONS[:lin][:height])
+    end
+    it 'for win pad' do
+      @ship.state = :win
+      @ship.height.should eql(Ship::DIMENSIONS[:win][:height])
+    end
   end
 end
