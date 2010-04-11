@@ -13,7 +13,7 @@ class Ship
   attr_accessor :x, :y, :state
 
   def initialize(window)
-    @ship = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ship.png"), true)
+    @ship = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "mac.png"), true)
     @y = INITIALPOSITION[:y]
     @x = INITIALPOSITION[:x]
 
