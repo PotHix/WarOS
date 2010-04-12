@@ -34,6 +34,19 @@ class WarOS < Gosu::Window
       @ship.move_right
     end
 
+    if button_down? Gosu::KbSpace
+      case @ship.state
+        when :win
+          @ship.state = :mac
+        when :mac
+          @ship.state = :lin
+        when :lin
+          @ship.state = :win
+        else
+          @ship.state = :win
+      end
+    end
+
     @ball.directions_changing :to_top => has_ship_and_ball_colision?
     @ball.move
   end
@@ -46,6 +59,7 @@ class WarOS < Gosu::Window
 
     @text.draw("x = #{@ball.instance_variable_get('@x')} | y = #{@ball.instance_variable_get('@y')}",10,10,0)
     @text.draw("top = #{@ball.instance_variable_get('@moving_state')[:top]} | right = #{@ball.instance_variable_get('@moving_state')[:right]}",10,20,0)
+    @text.draw("state = #{@ship.state}",10,30,0)
   end
 
   def button_down(id)
