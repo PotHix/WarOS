@@ -25,10 +25,10 @@ class Ball
   end
 
   def directions_changing(allow = {})
-    @moving_state[:top] = false if ((0-direction_change_margin)..(0+direction_change_margin)).include?(@y)
+    @moving_state[:top] = false if need_to_change_direction?(0,@y)
     @moving_state[:top] = true if allow[:to_top]
-    @moving_state[:right] = false if ((WarOS::WIDTH - BALLWIDTH - direction_change_margin)..(WarOS::WIDTH - BALLWIDTH + direction_change_margin)).include?(@x)
-    @moving_state[:right] = true  if ((0-direction_change_margin)..(0+direction_change_margin)).include?(@x)
+    @moving_state[:right] = false if need_to_change_direction?(WarOS::WIDTH - BALLWIDTH, @x)
+    @moving_state[:right] = true  if need_to_change_direction?(0, @x)
   end
   
   def position
@@ -37,5 +37,10 @@ class Ball
 
   def direction_change_margin
     @velocity / 2
+  end
+
+  def need_to_change_direction?(position, axis)
+    range = (position-direction_change_margin)..(position+direction_change_margin)
+    range.include?(axis)
   end
 end
