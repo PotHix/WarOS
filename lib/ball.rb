@@ -1,12 +1,12 @@
 class Ball
   BALLWIDTH = 20
 
-  attr_accessor :x, :y, :moving_state, :ball_velocity
+  attr_accessor :x, :y, :moving_state, :velocity
 
   def initialize(window)
     @ball = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
 
-    @ball_velocity = 5.0
+    @velocity = 5.0
     @y = WarOS::HEIGHT/2
     @x = WarOS::WIDTH/3
  
@@ -16,8 +16,8 @@ class Ball
   end
 
   def move
-    @moving_state[:top]   ? @y -= @ball_velocity : @y += @ball_velocity
-    @moving_state[:right] ? @x += @ball_velocity : @x -= @ball_velocity
+    @moving_state[:top]   ? @y -= @velocity : @y += @velocity
+    @moving_state[:right] ? @x += @velocity : @x -= @velocity
   end
 
   def draw
@@ -36,6 +36,6 @@ class Ball
   end
 
   def direction_change_margin
-    @ball_velocity / 2
+    @velocity / 2
   end
 end

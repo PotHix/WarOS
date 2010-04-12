@@ -14,25 +14,25 @@ describe Ball do
     it 'should decrease by a "ball_velocity" the y coordinate for a true top moving space' do
       @ball.moving_state = {:top => true, :right => true}
       before_move, after_move = move_ball_and_return :y
-      after_move.should eql(before_move - @ball.ball_velocity)
+      after_move.should eql(before_move - @ball.velocity)
     end
 
     it 'should increase by a "ball_velocity" the y coordinate for a false top moving space' do
       @ball.moving_state = {:top => false, :right => true}
       before_move, after_move = move_ball_and_return :y
-      after_move.should eql(before_move + @ball.ball_velocity)
+      after_move.should eql(before_move + @ball.velocity)
     end
 
     it 'should increase by a "ball_velocity" the x coordinate for a true right moving space' do
       @ball.moving_state = {:top => true, :right => true}
       before_move, after_move= move_ball_and_return :x
-      after_move.should eql(before_move + @ball.ball_velocity)
+      after_move.should eql(before_move + @ball.velocity)
     end
 
     it 'should decrease by a "ball_velocity" the x coordinate for a false right moving space' do
       @ball.moving_state = {:top => true, :right => false}
       before_move, after_move = move_ball_and_return :x
-      after_move.should eql(before_move - @ball.ball_velocity)
+      after_move.should eql(before_move - @ball.velocity)
     end
 
     context 'and coliding' do
@@ -65,6 +65,10 @@ describe Ball do
   it 'should return the current ball position' do
     position = { :x => @ball.x, :y => @ball.y }
     @ball.position.should eql(position)
+  end
+
+  it 'should return a secure margin for the diretion changing' do
+    @ball.direction_change_margin.should eql(@ball.velocity / 2)
   end
 
   private
