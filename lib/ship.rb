@@ -1,39 +1,58 @@
 class Ship
   INITIALPOSITION = {:y => 510, :x => 210}
 
-  SHIPSECUREMARGIN = 5
-  SHIPVELOCITY     = 5.0
+  SECUREMARGIN = 5
+  VELOCITY     = 5.0
 
-  attr_accessor :x, :y, :state, :width, :height
+  attr_reader :state, :image
+  attr_accessor :x, :y
 
   def initialize(window)
-    win = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "win.png"), true)
-    mac = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "mac.png"), true)
-    lin = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "lin.png"), true)
+    @graphics = {
+      :win => Gosu::Image.new(window, File.join(File.dirname(__FILE__), '../media', 'win.png'), true),
+      :mac => Gosu::Image.new(window, File.join(File.dirname(__FILE__), '../media', 'mac.png'), true),
+      :lin => Gosu::Image.new(window, File.join(File.dirname(__FILE__), '../media', 'lin.png'), true)
+    }
 
     @state = :mac
+
     @y = INITIALPOSITION[:y]
     @x = INITIALPOSITION[:x]
 
-    @ship = mac
-
-    @width = @ship.width
-    @height = @ship.height
+    @image = build_graphic
   end
 
   def move_left 
-    @x -= SHIPVELOCITY if @x > SHIPSECUREMARGIN
+    @x -= VELOCITY if @x > SECUREMARGIN
   end
 
   def move_right
-    @x += SHIPVELOCITY if @x < WarOS::WIDTH - self.width
+    @x += VELOCITY if @x < WarOS::WIDTH - self.width
   end
 
   def draw
-    @ship.draw(@x, @y, 0)
+    @image.draw(@x, @y, 0)
   end
   
   def position
     @x..(@x+self.width)
   end
+
+  def state=(new_state)
+    @state = new_state.to_sym
+    build_graphic
+  end
+
+  def width
+    @image.width
+  end
+
+  def height
+    @image.height
+  end
+
+  private
+    def build_graphic
+      @image = @graphics[@state]
+    end
 end
