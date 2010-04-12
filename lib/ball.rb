@@ -4,7 +4,7 @@ class Ball
   attr_accessor :x, :y, :moving_state, :velocity
 
   def initialize(window)
-    @ball = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
+    @image = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
 
     @velocity = 5.0
     @y = WarOS::HEIGHT/2
@@ -21,7 +21,7 @@ class Ball
   end
 
   def draw
-    @ball.draw(@x, @y, 0)
+    @image.draw(@x, @y, 0)
   end
 
   def directions_changing(allow = {})

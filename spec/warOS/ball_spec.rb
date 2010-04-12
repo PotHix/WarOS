@@ -7,7 +7,7 @@ describe Ball do
   end
 
   it 'should instantiate a ball object with a image loaded' do
-    @ball.instance_variable_get("@ball").class.should == Gosu::Image
+    @ball.instance_variable_get("@image").class.should == Gosu::Image
   end
 
   context 'when moving' do
