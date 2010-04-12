@@ -40,7 +40,7 @@ class WarOS < Gosu::Window
       @ship.move_right
     end
 
-    if (@@button_press_control-DELAY > 0) && button_down?(Gosu::KbSpace)
+    if button_down?(Gosu::KbSpace) && @@button_press_control-DELAY > 0
 
       @@button_press_control = 0
       case @ship.state
