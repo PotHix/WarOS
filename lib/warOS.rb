@@ -8,11 +8,15 @@ class WarOS < Gosu::Window
   WIDTH, HEIGHT = 640, 640
   SHIPCOLISIONPOSITION = Ship::INITIALPOSITION[:y] - Ball::BALLWIDTH
 
+  DELAY = 20
+
   attr_reader :ship, :ball
 
   def initialize
     super(WIDTH, HEIGHT, false)
     self.caption = "WarOS Game!"
+
+    @@button_press_control = 0
 
     @ship = Ship.new(self)
     @ball = Ball.new(self)
@@ -26,6 +30,8 @@ class WarOS < Gosu::Window
   def update
     close if game_over?
 
+    @@button_press_control+=1
+
     if button_down? Gosu::KbLeft or button_down? Gosu::GpLeft
       @ship.move_left
     end
@@ -34,15 +40,15 @@ class WarOS < Gosu::Window
       @ship.move_right
     end
 
-    if button_down? Gosu::KbSpace
+    if (@@button_press_control-DELAY > 0) && button_down?(Gosu::KbSpace)
+
+      @@button_press_control = 0
       case @ship.state
         when :win
           @ship.state = :mac
         when :mac
           @ship.state = :lin
         when :lin
-          @ship.state = :win
-        else
           @ship.state = :win
       end
     end
