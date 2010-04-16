@@ -17,4 +17,6 @@ describe WarOS do
     @ship.x = @ball.x
     @window.has_ship_and_ball_colision?.should be_true
   end
+
+  it 'should have more than one ball'
 end

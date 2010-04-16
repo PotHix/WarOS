@@ -71,6 +71,8 @@ describe Ball do
     @ball.direction_change_margin.should eql(@ball.velocity / 2)
   end
 
+  it 'should increase ball velocity'
+
   private
   def move_ball_and_return coordinate
     result = []
