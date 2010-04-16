@@ -4,6 +4,7 @@ require 'gosu'
 require 'lib/ball'
 require 'lib/ship'
 require 'lib/enemy'
+require 'lib/item'
 
 class WarOS < Gosu::Window
   WIDTH, HEIGHT = 640, 640
