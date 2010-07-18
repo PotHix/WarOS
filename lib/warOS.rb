@@ -1,10 +1,14 @@
 require 'rubygems'
 require 'gosu'
 
-require 'lib/ball'
-require 'lib/ship'
-require 'lib/enemy'
-require 'lib/item'
+#require "#{File.expand_path(File.dirname(__FILE__))}/ball"
+#require "#{File.expand_path(File.dirname(__FILE__))}/ship"
+#require "#{File.expand_path(File.dirname(__FILE__))}/enemy"
+#require "#{File.expand_path(File.dirname(__FILE__))}/item"
+require_file "lib/ball"
+require_file "lib/ship"
+require_file "lib/enemy"
+require_file "lib/item"
 
 class WarOS < Gosu::Window
   WIDTH, HEIGHT = 640, 640
