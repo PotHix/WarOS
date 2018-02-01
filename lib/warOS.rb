@@ -23,7 +23,7 @@ class WarOS < Gosu::Window
     @ship = Ship.new(self)
     @ball = Ball.new(self)
 
-    @background_image = Gosu::Image.new(self, "media/background.png", true)
+    @background_image = Gosu::Image.new("media/background.png", tileable: true)
 
     @text = Gosu::Font.new(self,'Arial',15)
     @moving_state_text = Gosu::Font.new(self,'Arial',15)

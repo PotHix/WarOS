@@ -9,9 +9,9 @@ class Ship
 
   def initialize(window)
     @graphics = {
-      :win => Gosu::Image.new(window, File.join(File.dirname(__FILE__), '../media', 'win.png'), true),
-      :mac => Gosu::Image.new(window, File.join(File.dirname(__FILE__), '../media', 'mac.png'), true),
-      :lin => Gosu::Image.new(window, File.join(File.dirname(__FILE__), '../media', 'lin.png'), true)
+      :win => Gosu::Image.new(File.join(File.dirname(__FILE__), '../media', 'win.png'), tileable: true),
+      :mac => Gosu::Image.new(File.join(File.dirname(__FILE__), '../media', 'mac.png'), tileable: true),
+      :lin => Gosu::Image.new(File.join(File.dirname(__FILE__), '../media', 'lin.png'), tileable: true)
     }
 
     @state = :mac

@@ -4,7 +4,7 @@ class Ball
   attr_accessor :x, :y, :moving_state, :velocity
 
   def initialize(window)
-    @image = Gosu::Image.new(window, File.join(File.dirname(__FILE__), "../media", "ball.png"), true)
+    @image = Gosu::Image.new(File.join(File.dirname(__FILE__), "../media", "ball.png"), tileable: true)
 
     @velocity = 5.0
     @y = WarOS::HEIGHT/2
