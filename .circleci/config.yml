@@ -11,22 +11,20 @@ jobs: # a collection of steps
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
 
-      # Which version of bundler?
       - run:
-          name: Install bundler
-          command: gem install bundler
+          name: Install Gosu dependencies
+          command: sudo apt-get install build-essential libsdl2-dev libgl1-mesa-dev libopenal-dev libsndfile-dev libmpg123-dev libgmp-dev libfontconfig1-dev
 
       # Which version of bundler?
       - run:
           name: Which bundler?
           command: bundle -v
 
-      # Restore bundle cache
       # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
       - restore_cache:
           keys:
-            - rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
-            - rails-demo-bundle-v2-
+            - bundle-v2-{{ checksum "Gemfile.lock" }}
+            - bundle-v2-
 
       - run: # Install Ruby dependencies
           name: Bundle Install
@@ -34,7 +32,7 @@ jobs: # a collection of steps
 
       # Store bundle cache for Ruby dependencies
       - save_cache:
-          key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
+          key: bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
 
