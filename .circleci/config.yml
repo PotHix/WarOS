@@ -13,7 +13,7 @@ jobs: # a collection of steps
 
       - run:
           name: Install Gosu dependencies
-          command: sudo apt-get install build-essential libsdl2-dev libgl1-mesa-dev libopenal-dev libsndfile-dev libmpg123-dev libgmp-dev libfontconfig1-dev ruby-dev
+          command: sudo apt-get install build-essential libsdl2-dev libgl1-mesa-dev libopenal-dev libsndfile-dev libmpg123-dev libgmp-dev libfontconfig1-dev libsdl2-ttf-dev ruby-dev
 
       # Which version of bundler?
       - run:
